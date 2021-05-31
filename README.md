@@ -27,3 +27,40 @@ function love.draw()
 	love.graphics.draw(image, 0, 0, 0, 10, 10)
 end 
 ```
+
+### ouput structure:
+
+```lua
+local ase = {
+  header = {
+    file_size = int,
+    magic_number = int, -- (need to be 0xA5E0)
+    frames_number = int,
+    width = int,
+    height = int,
+    color_depth = int,
+    opacity = int,
+    speed = int,
+    palette_entry = int,
+    number_color = int,
+    pixel_width = int,
+    pixel_height = int,
+    grid_x = int,
+    grid_y = int,
+    grid_width = int,
+    grid_height = int,
+    frames = {} -- (array of frame)
+  }
+}
+
+local frame = {
+  bytes_size = int,
+  magic_number = int, -- (need to be 0xF1FA)
+  frame_duration = int,
+  chunks_number = int,
+  chunks = {} -- (array of chunk)
+}
+
+-- chunk can have multiple types
+
+```

@@ -1,3 +1,6 @@
+-- Create by github.com/Cripboy under MIT
+-- Date: 31/05/2021
+
 local data = nil
 
 -- size
@@ -53,7 +56,7 @@ local function grab_header()
 	-- set be 0 (ignore that)
 	read_byte(DWORD * 2)
 
-	header.pallete_entry = read_byte(BYTE)
+	header.palette_entry = read_byte(BYTE)
 
 	-- ignore
 	read_byte(BYTE * 3)
@@ -68,6 +71,9 @@ local function grab_header()
 
 	-- set be 0 (ignore that)
 	read_byte(BYTE * 84)
+
+	-- to the future
+	header.frames = {}
 
 	return header
 end
@@ -314,7 +320,6 @@ local function load_ase(src)
 
 	local ase = {}
 	ase.header = grab_header()
-	ase.header.frames = {}
 
 	for i = 1, ase.header.frames_number do
 		ase.header.frames[i] = grab_frame_header()

@@ -58,11 +58,20 @@ local frame = {
   magic_number = int, -- (need to be 0xF1FA)
   frame_duration = int,
   chunks_number = int,
-  chunks = {} -- (array of chunk)
+  
+   -- (array of chunk)
+  chunks = {
+    type = int,
+    
+    -- the data will be defined by the chunk type
+    data = {}
+  }
 }
 
 -- chunk can have multiple types you can see it on code 😜, but i'll show the most essentials
-local chunk_cel = {
+
+-- type: 0x2005
+local chunk_cel_data = {
   layer_index = int,
   x = int,
   y = int,
@@ -73,10 +82,11 @@ local chunk_cel = {
   data = string -- (Base64 string, this is the frame image compressed)
 }
 
-local chunk_tags = {
+-- type: 0x2018
+local chunk_tags_data = {
   number = int,
   
-  -- array of tag (this inside is just a example)
+  -- array of tag (this inside is just anexample)
   tags = {
     {
       from = int,

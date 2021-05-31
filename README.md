@@ -61,6 +61,29 @@ local frame = {
   chunks = {} -- (array of chunk)
 }
 
--- chunk can have multiple types
+-- chunk can have multiple types you can see it on code 😜, but i'll show the most essentials
+local chunk_cel = {
+  layer_index = int,
+  x = int,
+  y = int,
+  opacity_level = int,
+  type = int, -- (only type 2 are acepted)
+  width = int,
+  height = int,
+  data = string -- (Base64 string, this is the frame image compressed)
+}
 
+local chunk_tags = {
+  number = int,
+  
+  -- array of tag (this inside is just a example)
+  tags = {
+    {
+      from = int,
+      to = int,
+      direction = int,
+      name = string
+    }
+  }
+}
 ```

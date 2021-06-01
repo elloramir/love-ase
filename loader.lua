@@ -26,13 +26,8 @@ end
 
 local function read_string()
 	local length = read_byte(WORD)
-	local str = ""
 
-	for i = 1, length do
-		str = str .. data:read(BYTE)
-	end
-
-	return str
+	return data:read(length)
 end
 
 local function grab_header()
@@ -234,7 +229,6 @@ local function grab_tags()
 			skip_holder = read_byte(BYTE * 8),
 			name = read_string()
 		}
-
 	end
 
 	return tags

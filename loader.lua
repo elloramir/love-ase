@@ -29,7 +29,7 @@ local function read_string()
 	local str = ""
 
 	for i = 1, length do
-		str = str .. tostring(read_byte(BYTE))
+		str = str .. data:read(BYTE)
 	end
 
 	return str
@@ -234,6 +234,7 @@ local function grab_tags()
 			skip_holder = read_byte(BYTE * 8),
 			name = read_string()
 		}
+
 	end
 
 	return tags

@@ -13,7 +13,7 @@ love.graphics.setDefaultFilter("nearest", "nearest")
 -- load file
 local player_ase = loader("player.ase")
 
--- get random chunk 1 from frame 5
+-- get chunk 1 from frame 5
 local chunk = player_ase.header.frames[5].chunks[1].data
 
 -- decompress image bytes

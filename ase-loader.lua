@@ -330,6 +330,7 @@ end
 
 local function ase_loader(src)
 	local data = io.open(src, "rb")
+	assert(data, "can't open " .. src)
 	local ase = {}
 
 	-- parse header

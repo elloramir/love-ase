@@ -1,6 +1,6 @@
 # Lua asprite loader
-[It](ase-loader.lua) helps you to read ASE files without parsing them into a json or something. So helpful for development,
-but I recommend not using it in production (without an atlas builder), loading files this way is
+It helps you to read ASE files without parsing them into a json or something. So helpful for development,
+but I recommend not using it in production (without an [atlas builder](https://github.com/elloramir/packer)), loading files this way is
 slower than just passing src :smile: data.
 
 ### Example:

@@ -1,18 +1,16 @@
-# Lua asprite loader
-It helps you to read ASE files without parsing them into a json or something. So helpful for development,
-but I recommend not using it in production (without an [atlas builder](https://github.com/elloramir/packer)), loading files this way is
-slower than just passing src data.
+### Lua Aseprite Loader
+A lightweight library for reading Aseprite files in Lua. No need to parse the Aseprite file into a JSON format - this library allows you to access the data directly.
 
-### Example:
-You will find an example in [main.lua](main.lua) of how to make a simple sprite object with
+We recommend using this library in conjunction with an [atlas builder](https://github.com/elloramir/packer)) to create sprite sheets.
 
-Note: this loader is not an animation framework, it provides a way to load files from aseprite. Implement
-your own sprite system based on the example
+### Example
+Check out the example folder in the root directory of the project to see how to use this library in your project.
 
-**player.ase (demo file) available tags, have fun :smile:**
+Here is a preview of the tags in the player.ase file:
 
 ![tags](https://i.imgur.com/ndEVaeU.png)
 
-### Loader output:
-The output is the same from [ase file specs docs](https://github.com/aseprite/aseprite/blob/master/docs/ase-file-specs.md) with
-few changes. You can easily find it at [ase-loader.lua](ase-loader.lua)
+Have fun :smile:
+
+### Loader Output
+The output of this library is similar to the format specified in the Aseprite file [specs](https://github.com/aseprite/aseprite/blob/master/docs/ase-file-specs.md) with a few modifications

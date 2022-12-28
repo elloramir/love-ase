@@ -1,4 +1,7 @@
-local loader = require "ase-loader"
+-- add previous folder as package path
+package.path = package.path .. ";../?.lua"
+
+local loader = require "lovease"
 
 local module = {}
 local sprite = {}
